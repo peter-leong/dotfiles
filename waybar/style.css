@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     min-height: 0;
-    font-family: "FiraCodeNerdFontMono";
+    font-family: "Font Awesome", "FiraCodeNerdFontMono";
     font-size: 16px;
     padding: 0;
     /* `otf-font-awesome` is required to be installed for icons */
@@ -117,8 +117,7 @@ button {
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #b8bb26;
 }
 
 @keyframes blink {
@@ -164,17 +163,19 @@ label:focus {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    color: #fb4934;
 }
 
 #pulseaudio {
     color: #fb4934;
 }
 
+/*
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
 }
+*/
 
 #wireplumber {
     background-color: #fff0f5;
