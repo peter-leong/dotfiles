@@ -39,7 +39,7 @@ output eDP-1 mode 2560x1600@60.001Hz
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f -i /usr/share/backgrounds/linuxmint-wilma/aksenapati_snow_mountain.jpg' \
+         timeout 600 'swaylock -f -i /usr/share/backgrounds/linuxmint-wilma/aksenapati_snow_mountain.jpg' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          before-sleep 'swaylock -f -i /usr/share/backgrounds/linuxmint-wilma/aksenapati_snow_mountain.jpg'
 
@@ -84,6 +84,9 @@ input "type:touchpad" {
 
     # Start Nemo
     bindsym $mod+e exec nemo
+
+    # Lock screen
+    bindsym $mod+ctrl+l exec swaylock -i /usr/share/backgrounds/linuxmint-wilma/aksenapati_snow_mountain.jpg
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
