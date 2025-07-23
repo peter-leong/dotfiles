@@ -20,7 +20,8 @@ smart_borders on
 default_border pixel 2
 
 #	       inactive tb bg  tb fg   indicator active
-client.focused #282828 #000000 #000000 #ebdbb2 #689d6a
+client.focused #282828 #282828 #282828 #ebdbb2 #689d6a
+client.unfocused #282828 #282828 #282828
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
