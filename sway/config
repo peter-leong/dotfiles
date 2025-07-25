@@ -28,8 +28,10 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-bindsym XF86MonBrightnessUp exec brightnessctl set 3+
-bindsym XF86MonBrightnessDown exec brightnessctl set 3-
+bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym $mod+XF86MonBrightnessUp exec brightnessctl set 3+
+bindsym $mod+XF86MonBrightnessDown exec brightnessctl set 3-
 
 include /etc/sway/config-vars.d/*
 
@@ -46,6 +48,8 @@ exec swayidle -w \
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
+exec gammastep -l 40.7:-74.5
 
 ### Input configuration
 input "type:keyboard" {
@@ -74,7 +78,7 @@ input "type:touchpad" {
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec wofi --show run
+    bindsym $mod+d exec wofi --show drun
 
     # Start Firefox
     bindsym $mod+w exec firefox
